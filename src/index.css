@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-navbar {
+    background-color: rgba(241, 241, 241, 0.223);
+  }
+}
