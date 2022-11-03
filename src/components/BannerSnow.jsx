@@ -1,6 +1,6 @@
-export const BannerSnow = () => {
+export const BannerSnow = ({ styles }) => {
   return (
-    <div className="w-full h-3/6 absolute bottom-0">
+    <div className={styles}>
       <img
         className="w-full h-full object-cover"
         src="./imgs/snow.png"

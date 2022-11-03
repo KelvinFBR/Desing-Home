@@ -1,6 +1,6 @@
 export const BannerMountainTwo = () => {
   return (
-    <div className="w-full h-full absolute -bottom-36 right-0">
+    <div className="w-full h-full">
       <img
         className="w-full h-full"
         src="./imgs/mountain2.png"
