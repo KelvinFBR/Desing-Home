@@ -18,12 +18,9 @@ export const Header = () => {
         <NavBar />
         <div className="w-full h-full absolute flex justify-center">
           <div className="max-w-5xl relative">
-            {/* <div className="bg-[#f1f1f1] w-full h-36 absolute left-0 bottom-0 z-20"></div> */}
-            {/* <div className="bg-[#f1f1f1] w-full h-32 absolute left-0 bottom-0 z-20"></div> */}
-
-            <h3 className="bott font-bold text-4xl md:text-6xl text-center text-shadow text-white sticky top-44 z-10">
+            <h3 className="bott font-bold text-4xl md:text-6xl text-center text-shadow text-white sticky top-40 z-30">
               Designing your home from the North Pole for
-              <span className=" text-red-500"> Xmas</span>
+              <span className=" text-red-500 "> Xmas</span>
             </h3>
           </div>
         </div>
@@ -32,7 +29,6 @@ export const Header = () => {
         <BannerSnow styles="w-full h-3/6 absolute bottom-0" />
         <BannerSnow styles="w-full h-3/6 absolute -bottom-[250px] z-50" />
         <BannerHome />
-
         {/* <BannerSanta /> */}
 
         <MouseParallaxContainer
@@ -49,16 +45,28 @@ export const Header = () => {
         >
           <MouseParallaxChild
             factorX={0.5}
-            factorY={0}
+            factorY={0.5}
+            className="w-[140%] md:w-[70%]"
             style={{
-              width: "140%",
-
-              height: "120%",
-              //   maxHeight: "500px",
+              height: "70%",
               position: "absolute",
               left: "-20%",
-              bottom: "-150px",
+              bottom: "105px",
               zIndex: "0",
+            }}
+          >
+            <BannerMountainOne />
+          </MouseParallaxChild>
+          <MouseParallaxChild
+            factorX={0.5}
+            factorY={0.5}
+            className="w-[140%] md:w-[70%]"
+            style={{
+              height: "70%",
+              position: "absolute",
+              left: "50%",
+              bottom: "100px",
+              zIndex: "",
             }}
           >
             <BannerMountainOne />
@@ -67,45 +75,32 @@ export const Header = () => {
           <MouseParallaxChild
             factorX={0.3}
             factorY={0}
-            // className="-left-[50%] w-[280%] lg:w-[140%] lg:-left-[20%]"
+            className="w-[180%] md:w-[100%] -left-[80%] md:-left-[20%]"
             style={{
-              width: "140%",
-
               height: "100%",
               position: "absolute",
-              left: "-20%",
-              bottom: "-200px", // estable
-              //   bottom: "-160px",
-              zIndex: "20",
+              bottom: "-180px",
+              zIndex: "10",
             }}
           >
             <BannerMountainTwo />
           </MouseParallaxChild>
 
           <MouseParallaxChild
-            factorX={0.1}
-            factorY={0}
-            className="-left-36 w-[180%] lg:w-[140%] lg:-left-96"
+            factorX={0.3}
+            factorY={0.3}
+            className="w-[180%] md:w-[120%] -left-48 md:-left-[10%]"
             style={{
-              //   width: "140%",
-
               height: "100%",
               position: "absolute",
-              //   rotate: "260deg",
-              //   left: "-300px",
-              bottom: "-400px", // estable
-              //   bottom: "-160px",
-              zIndex: "20",
+              bottom: "-200px",
+              zIndex: "30",
             }}
           >
-            <BannerMountainTwo />
+            <BannerMountainOne />
           </MouseParallaxChild>
         </MouseParallaxContainer>
       </header>
-
-      {/* <div className="w-full h-screen">
-        <BannerTrees />
-      </div> */}
     </>
   );
 };
