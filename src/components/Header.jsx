@@ -20,16 +20,16 @@ export const Header = () => {
           <div className="max-w-5xl relative">
             <h3 className="bott font-bold text-4xl md:text-6xl text-center text-shadow text-white sticky top-40 z-30">
               Designing your home from the North Pole for
-              <span className=" text-red-500 "> Xmas</span>
+              <span className=" text-red-400 "> Xmas</span>
             </h3>
           </div>
         </div>
         <BannerSky />
 
         <BannerSnow styles="w-full h-3/6 absolute bottom-0" />
-        <BannerSnow styles="w-full h-3/6 absolute -bottom-[250px] z-50" />
+        <BannerSnow styles="w-full h-3/6 absolute -bottom-[250px] z-40" />
         <BannerHome />
-        {/* <BannerSanta /> */}
+        <BannerSanta />
 
         <MouseParallaxContainer
           className="parallax"

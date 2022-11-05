@@ -1,6 +1,29 @@
+import { useEffect, useRef } from "react";
+
 export const BannerSanta = () => {
+  const santa = useRef();
+
+  useEffect(() => {
+    const moveScroll = (event) => {
+      console.log(
+        (santa.current.style = `left: ${Math.max(
+          -800 + 2.5 * window.scrollY
+        )}px; top:${Math.max(-200 + 0.5 * window.scrollY)}px`)
+      );
+    };
+
+    document.addEventListener("scroll", moveScroll);
+
+    return () => {
+      document.removeEventListener("scroll", moveScroll);
+    };
+  }, []);
+
   return (
-    <div className="max-w-3xl w-full absolute top-60 -left-50 z-40 px-5">
+    <div
+      ref={santa}
+      className="w-full text-5xl fixed top-[-200px] left-[-800px] max-w-3xl z-50 px-5"
+    >
       <img
         className="w-full h-full object-cover"
         src="./imgs/santa-claus.svg"
