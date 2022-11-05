@@ -5,11 +5,9 @@ export const BannerSanta = () => {
 
   useEffect(() => {
     const moveScroll = (event) => {
-      console.log(
-        (santa.current.style = `left: ${Math.max(
-          -800 + 2.5 * window.scrollY
-        )}px; top:${Math.max(-200 + 0.5 * window.scrollY)}px`)
-      );
+      santa.current.style = `left: ${Math.max(
+        -800 + 2.5 * window.scrollY
+      )}px; top:${Math.max(-200 + 0.5 * window.scrollY)}px`;
     };
 
     document.addEventListener("scroll", moveScroll);
@@ -25,8 +23,10 @@ export const BannerSanta = () => {
       className="w-full text-5xl fixed top-[-200px] left-[-800px] max-w-3xl z-50 px-5"
     >
       <img
-        className="w-full h-full object-cover"
-        src="./imgs/santa-claus.svg"
+        className="w-full h-full object-cover rotate-12"
+        src="./imgs/santa.gif"
+        // className="w-full h-full object-cover"
+        // src="./imgs/santa-claus.svg"
         alt="banner home "
       />
     </div>
