@@ -10,15 +10,16 @@ import {
 } from "react-parallax-mouse";
 import { BannerHome } from "./BannerHome";
 import { BannerSanta } from "./BannerSanta";
+import { BannerSnowAnimation } from "./BannerSnowAnimation";
 
 export const Header = () => {
   return (
     <>
-      <header className="w-full h-screen relative mb-56">
+      <header className="w-full h-screen relative mb-56 over">
         <NavBar />
         <div className="w-full h-full absolute flex justify-center">
           <div className="max-w-5xl relative">
-            <h3 className="bott font-bold text-4xl md:text-6xl text-center text-shadow text-white sticky top-40 z-30">
+            <h3 className="bott font-bold text-4xl md:text-6xl text-center text-shadow text-sky-100 sticky top-40 z-30">
               Designing your home from the North Pole for
               <span className=" text-red-400 "> Xmas</span>
             </h3>
@@ -30,6 +31,7 @@ export const Header = () => {
         <BannerSnow styles="w-full h-3/6 absolute -bottom-[250px] z-40" />
         <BannerHome />
         <BannerSanta />
+        <BannerSnowAnimation />
 
         <MouseParallaxContainer
           className="parallax"
