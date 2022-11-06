@@ -5,8 +5,6 @@ export const Sidebar = ({ isOpen }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          //   transition={{ type: "spring", stiffness: 100, duration: 500 }}
-          //   transition={{ type: "spring", duration: 0.8 }}
           transition={{ type: "spring", mass: 0.5 }}
           initial={{ zIndex: 40, top: 0, right: -50, width: 0 }}
           animate={{ zIndex: 40, top: 0, right: 0, width: "100%" }}
@@ -21,21 +19,21 @@ export const Sidebar = ({ isOpen }) => {
               <li
                 className="mt-16 transition-all 
               hover:scale-110
-            hover:border-b-orange-50 hover:border-b-2"
+            hover:border-b-sky-50 hover:border-b-2"
               >
                 <a href="#">Services</a>
               </li>
               <li
                 className="mt-16 transition-all
               hover:scale-110
-              hover:border-b-orange-50  hover:border-b-2"
+              hover:border-b-sky-50  hover:border-b-2"
               >
                 <a href="#">Contact</a>
               </li>
               <li
                 className="mt-16 transition-all
               hover:scale-110
-              hover:border-b-orange-50 hover:border-b-2"
+              hover:border-b-sky-50 hover:border-b-2"
               >
                 <a href="#">Clients</a>
               </li>

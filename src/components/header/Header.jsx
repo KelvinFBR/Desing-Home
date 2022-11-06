@@ -15,7 +15,7 @@ import { BannerSnowAnimation } from "./BannerSnowAnimation";
 export const Header = () => {
   return (
     <>
-      <header className="w-full h-screen relative mb-56 over">
+      <header className="w-full h-screen relative mb-64">
         <NavBar />
         <div className="w-full h-full absolute flex justify-center">
           <div className="max-w-5xl relative">

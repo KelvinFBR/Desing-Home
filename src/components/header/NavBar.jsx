@@ -1,35 +1,43 @@
 import { useState } from "react";
+import { useActiveBg } from "../../hooks/useActiveBg";
 import { Sidebar } from "./Sidebar";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const { isScrollDown } = useActiveBg();
+
+  console.log(isScrollDown);
   return (
     <>
-      <nav className="w-full flex justify-center items-center fixed top-0 z-50">
+      <nav
+        className={`w-full flex justify-center items-center fixed top-0 z-50 transition-all duration-700 ${
+          isScrollDown ? "bg-navbar" : ""
+        }`}
+      >
         {/* max-w-7xl esta podia estar en el futuro */}
-        <div className="w-full flex items-center justify-between h-[60px] px-8 text-white">
+        <div className="w-full flex items-center justify-between h-[60px] px-8 text-sky-100">
           <h1 className="font-bold text-2xl">DesingHome</h1>
 
           <ul className="hidden gap-5 font-normal text-lg md:flex">
             <li
               className="transition-all
              hover:scale-110
-           hover:border-b-orange-50 hover:border-b-2"
+           hover:border-b-sky-50 hover:border-b-2"
             >
               <a href="#">Services</a>
             </li>
             <li
               className=" transition-all
              hover:scale-110
-           hover:border-b-orange-50  hover:border-b-2"
+           hover:border-b-sky-50  hover:border-b-2"
             >
               <a href="#">Contact</a>
             </li>
             <li
               className="transition-all
             hover:scale-110
-           hover:border-b-orange-50 hover:border-b-2"
+           hover:border-b-sky-50 hover:border-b-2"
             >
               <a href="#">Clients</a>
             </li>
