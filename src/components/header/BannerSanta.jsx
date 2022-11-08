@@ -20,7 +20,7 @@ export const BannerSanta = () => {
   return (
     <div
       ref={santa}
-      className="w-full text-5xl fixed top-[-100px] left-[-800px] max-w-3xl z-50 px-5"
+      className="w-full text-5xl fixed top-[-100px] left-[-800px]  min-w-[300px] max-w-3xl z-50 px-5"
     >
       <img
         className="w-full h-full object-cover rotate-12"

@@ -5,37 +5,40 @@ export const Sidebar = ({ isOpen }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          transition={{ type: "spring", mass: 0.5 }}
-          initial={{ zIndex: 40, top: 0, right: -50, width: 0 }}
-          animate={{ zIndex: 40, top: 0, right: 0, width: "100%" }}
-          exit={{ zIndex: 40, top: 0, right: -50, width: 0 }}
-          className="w-full h-full absolute overflow-hidden"
+          transition={{ type: "spring", mass: 0.1, duration: 2.8 }}
+          initial={{
+            zIndex: 10,
+            top: -800,
+          }}
+          animate={{ zIndex: 10, top: 60 }}
+          exit={{ zIndex: 10, top: -800 }}
+          className="w-full h-full absolute"
         >
           <div
-            className={`w-2/4 h-full bg-navbar absolute top-0 right-0 z-40 md:hidden
-          transition-all duration-500`}
+            className={`w-full h-[50vh] bg-navbar absolute  md:hidden
+          transition-all duration-500 rounded-sm`}
           >
-            <ul className="w-full h-full flex flex-col mt-36 items-center gap-5 font-normal text-sky-100 text-lg">
+            <ul className="w-full h-full flex flex-col justify-evenly items-center gap-5 font-normal text-sky-100 text-lg">
               <li
-                className="mt-16 transition-all 
+                className="transition-all 
               hover:scale-110
             hover:border-b-sky-50 hover:border-b-2"
               >
-                <a href="#">Services</a>
+                <a href="#services">Services</a>
               </li>
               <li
-                className="mt-16 transition-all
-              hover:scale-110
-              hover:border-b-sky-50  hover:border-b-2"
-              >
-                <a href="#">Contact</a>
-              </li>
-              <li
-                className="mt-16 transition-all
+                className="transition-all
               hover:scale-110
               hover:border-b-sky-50 hover:border-b-2"
               >
-                <a href="#">Clients</a>
+                <a href="#clients">Clients</a>
+              </li>
+              <li
+                className="transition-all
+              hover:scale-110
+              hover:border-b-sky-50  hover:border-b-2"
+              >
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           </div>

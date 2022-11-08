@@ -15,8 +15,6 @@ export const useActiveBg = () => {
   useEffect(() => {
     document.addEventListener("scroll", scrollDown);
 
-    console.log();
-
     return () => {
       document.removeEventListener("scroll", scrollDown);
     };

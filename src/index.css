@@ -3,6 +3,21 @@
 @tailwind utilities;
 
 @layer utilities {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .bar-input__unenabled {
+    box-shadow: 0 -4px inset #001c417a;
+  }
+
+  .bar-input__enabled {
+    box-shadow: 0 -4px inset #001c41;
+  }
+  .input-radius {
+    border-radius: 4px 4px 0 0;
+  }
+
   .bg-navbar {
     /* background-color: rgba(241, 241, 241, 0.744); */
     background-color: #001c41eb;
