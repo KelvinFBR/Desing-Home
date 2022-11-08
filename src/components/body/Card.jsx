@@ -34,7 +34,7 @@ export const Card = ({ imgURLs = [], title }) => {
         <h3 className="text-lg font-bold text-[#001c41] mb-1 absolute bottom-0 z-20 uppercase">
           {title}
         </h3>
-        <span className="gradient-card absolute bottom-0 w-full h-10 z-10"></span>
+        <span className="gradient-card absolute -bottom-2 w-full h-10 z-10"></span>
       </div>
       <p className="p-4 text-center text-[#001c41] mt-3">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus ab

@@ -14,7 +14,7 @@ export const Header = () => {
         <NavBar />
         <div className="w-full h-full absolute flex justify-center">
           <div className="max-w-5xl relative">
-            <h3 className="bott font-bold text-4xl md:text-6xl text-center text-shadow text-sky-100 sticky top-40 z-30">
+            <h3 className="bott font-bold text-4xl md:text-6xl text-center text-shadow px-4 text-sky-100 sticky top-40 z-30">
               Designing your home from the North Pole for
               <span className=" text-red-400 "> Xmas</span>
             </h3>
