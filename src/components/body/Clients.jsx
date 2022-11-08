@@ -23,7 +23,15 @@ export const Clients = () => {
           spaceBetween={100}
           slidesPerView={1}
           loop
-          autoplay
+          navigation
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          //   pagination={{ clickable: true }}
+          //   onSwiper={(swiper) => console.log(swiper)}
+          //   onSlideChange={() => console.log("slide change")}
           className="my-20 p-20 sm:py-20 bg-[#001C41]"
         >
           <SwiperSlide className="flex justify-center">
