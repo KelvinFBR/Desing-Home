@@ -19,7 +19,7 @@ export const Footer = () => {
           target="_blank"
         >
           <img
-            src="https://cdn-icons-png.flaticon.com/512/1051/1051326.png"
+            src="https://cdn-icons-png.flaticon.com/512/1051/1051275.png"
             alt="Github icon"
             className="w-full h-full"
           />
