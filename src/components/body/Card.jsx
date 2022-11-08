@@ -1,20 +1,16 @@
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
-
+import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 export const Card = ({ imgURLs = [], title }) => {
   return (
     <div className="w-full h-80 bg-sky-100 rounded-md shadow sm:w-72 overflow-hidden">
       <div className="flex justify-center relative">
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          modules={[Autoplay]}
           spaceBetween={10}
           slidesPerView={1}
           loop
