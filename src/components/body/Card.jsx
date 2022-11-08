@@ -1,6 +1,6 @@
 // import Swiper core and required modules
-import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
@@ -11,13 +11,16 @@ export const Card = ({ imgURLs = [], title }) => {
       <div className="flex justify-center relative">
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={10}
+          spaceBetween={50}
           slidesPerView={1}
           loop
           autoplay={{
             delay: 2000,
             disableOnInteraction: false,
+            stopOnLastSlide: false,
             pauseOnMouseEnter: false,
+            waitForTransition: true,
+            reverseDirection: true,
           }}
         >
           {imgURLs.map((url) => (
