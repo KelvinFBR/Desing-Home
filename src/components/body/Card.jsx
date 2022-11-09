@@ -1,35 +1,32 @@
 // import Swiper core and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
+import { Autoplay, A11y } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
+import { ImgSlideCard } from "./ImgSlideCard";
 
 export const Card = ({ imgURLs = [], title }) => {
   return (
-    <div className="w-full h-80 bg-sky-100 rounded-md shadow sm:w-72 overflow-hidden">
+    <div className="w-full h-80 bg-sky-100 rounded-md shadow sm:w-72 overflow-hidden transition-all hover:scale-105">
       <div className="flex justify-center relative">
         <Swiper
-          modules={[Autoplay]}
+          modules={[Autoplay, A11y]}
           spaceBetween={50}
           slidesPerView={1}
           loop
+          a11y
           autoplay={{
             delay: 2000,
             disableOnInteraction: false,
             stopOnLastSlide: false,
             pauseOnMouseEnter: false,
             waitForTransition: true,
-            reverseDirection: true,
           }}
         >
           {imgURLs.map((url) => (
             <SwiperSlide key={url} className="flex justify-center">
-              <img
-                src={url}
-                alt="image card"
-                className="w-full h-[180px] object-cover"
-              />
+              <ImgSlideCard url={url} />
             </SwiperSlide>
           ))}
         </Swiper>

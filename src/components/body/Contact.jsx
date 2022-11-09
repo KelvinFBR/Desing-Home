@@ -4,7 +4,7 @@ export const Contact = () => {
       <h2 className="text-center text-3xl font-bold text-[#001c41]">Contact</h2>
 
       <section className="flex justify-center flex-wrap w-full my-24 px-10">
-        <div className="w-full max-w-sm">
+        <div className="w-full max-w-2xl px-10 lg:max-w-sm lg:p-0">
           <form className="w-full flex flex-col justify-center items-center gap-8">
             <input
               type="text"

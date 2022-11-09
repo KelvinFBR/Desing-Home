@@ -15,7 +15,9 @@ export const NavBar = () => {
       >
         {/* max-w-7xl esta podia estar en el futuro */}
         <div className="w-full flex items-center justify-between h-[60px] px-8 text-sky-100 z-30">
-          <h1 className="font-bold text-2xl">DesingHome</h1>
+          <h1 className="font-bold text-2xl">
+            <a href="#">DesingHome</a>
+          </h1>
 
           <ul className="hidden gap-10 font-normal text-lg md:flex">
             <li
@@ -60,7 +62,7 @@ export const NavBar = () => {
             )}
           </div>
         </div>
-        <Sidebar isOpen={isOpen} />
+        <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
       </nav>
     </>
   );

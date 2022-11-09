@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 
-export const Sidebar = ({ isOpen }) => {
+export const Sidebar = ({ isOpen, setIsOpen }) => {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -24,21 +24,27 @@ export const Sidebar = ({ isOpen }) => {
               hover:scale-110
             hover:border-b-sky-50 hover:border-b-2"
               >
-                <a href="#services">Services</a>
+                <a href="#services" onClick={() => setIsOpen(false)}>
+                  Services
+                </a>
               </li>
               <li
                 className="transition-all
               hover:scale-110
               hover:border-b-sky-50 hover:border-b-2"
               >
-                <a href="#clients">Clients</a>
+                <a href="#clients" onClick={() => setIsOpen(false)}>
+                  Clients
+                </a>
               </li>
               <li
                 className="transition-all
               hover:scale-110
               hover:border-b-sky-50  hover:border-b-2"
               >
-                <a href="#contact">Contact</a>
+                <a href="#contact" onClick={() => setIsOpen(false)}>
+                  Contact
+                </a>
               </li>
             </ul>
           </div>
