@@ -1,37 +1,47 @@
 // import Swiper core and required modules
+import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, A11y } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
-import { ImgSlideCard } from "./ImgSlideCard";
 
 export const Card = ({ imgURLs = [], title }) => {
   return (
     <div className="w-full h-80 bg-sky-100 rounded-md shadow sm:w-72 overflow-hidden transition-all hover:scale-105">
       <div className="flex justify-center relative">
         <Swiper
-          modules={[Autoplay, A11y]}
-          spaceBetween={50}
-          slidesPerView={1}
+          modules={[Autoplay]}
           loop
-          a11y
           autoplay={{
-            delay: 2000,
+            delay: 3000,
             disableOnInteraction: false,
-            stopOnLastSlide: false,
-            pauseOnMouseEnter: false,
             waitForTransition: true,
           }}
+          slidesPerView={1}
+          breakpoints={{
+            "@0.00": {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+          }}
         >
-          {imgURLs.map((url) => (
-            <SwiperSlide key={url} className="flex justify-center">
-              <ImgSlideCard url={url} />
+          {imgURLs?.map((url, index) => (
+            <SwiperSlide
+              key={url}
+              virtualIndex={index}
+              style={{ fontSize: "0.3px", position: "relative" }}
+            >
+              -
+              <img
+                src={url}
+                alt="image card"
+                className="w-full h-[180px] relative -top-[0.3px] object-cover"
+              />
             </SwiperSlide>
           ))}
         </Swiper>
 
-        <h3 className="text-lg font-bold text-[#001c41] mb-1 absolute bottom-0 z-20 uppercase">
+        <h3 className="text-lg font-bold text-[#001c41] text-shadow-title-card absolute bottom-0 z-20 uppercase">
           {title}
         </h3>
         <span className="gradient-card absolute -bottom-2 w-full h-10 z-10"></span>
